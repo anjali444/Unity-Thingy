@@ -31,7 +31,11 @@ public class PlayerMovement : MonoBehaviour {
 
         Vector2 force = new Vector2(axis * _moveForce, jumpAmount);
         _rigidbody.AddForce(force);
-        if (Mathf.Abs(_rigidbody.velocity.x) > _maxSpeed) { _rigidbody.velocity = Mathf.Sign(_rigidbody.velocity.x) * new Vector2(_maxSpeed, _rigidbody.velocity.y); }
+        if (Mathf.Abs(_rigidbody.velocity.x) > _maxSpeed)
+        {
+        float speed = Mathf.Sign(_rigidbody.velocity.x) * _maxSpeed;
+            _rigidbody.velocity = new Vector2(speed, _rigidbody.velocity.y);
+        }
     }
 
 
