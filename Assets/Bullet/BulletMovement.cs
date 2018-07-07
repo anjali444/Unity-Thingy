@@ -5,11 +5,6 @@ using UnityEngine;
 public class BulletMovement : MonoBehaviour {
 
     public Vector3 _velocity;
-
-	// Use this for initialization
-	void Start () {
-		
-	}
 	
 	// Update is called once per frame
 	void Update () {
@@ -18,6 +13,12 @@ public class BulletMovement : MonoBehaviour {
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        
+        //Debug.Log("bullet!");
+        if (collision.tag == "Player")
+        {
+            Debug.Log("bullet touches player!");
+            Destroy(gameObject);
+
+        }
     }
 }
