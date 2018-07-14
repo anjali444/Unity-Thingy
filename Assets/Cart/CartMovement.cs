@@ -9,11 +9,4 @@ public class CartMovement : MonoBehaviour
     [SerializeField] private float _moveForce;
     [SerializeField] private float _maxSpeed;
 
-
-    private void FixedUpdate()
-    {
-        float axis;
-        axis = Input.GetAxisRaw("Horizontal");
-    }
-
 }

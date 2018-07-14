@@ -24,7 +24,7 @@ GameObject:
   - component: {fileID: 114138242528934766}
   - component: {fileID: 50493086887959120}
   m_Layer: 0
-  m_Name: Bullet (1)
+  m_Name: Player Bullet
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -38,7 +38,7 @@ Transform:
   m_GameObject: {fileID: 1744984683245538}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 1.9510022, y: -1.637, z: 0.19822356}
-  m_LocalScale: {x: 5.9171257, y: 2.5903807, z: 1}
+  m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 0
@@ -61,7 +61,7 @@ Rigidbody2D:
   m_Material: {fileID: 0}
   m_Interpolate: 0
   m_SleepingMode: 1
-  m_CollisionDetection: 1
+  m_CollisionDetection: 0
   m_Constraints: 0
 --- !u!61 &61776347141921786
 BoxCollider2D:
@@ -74,7 +74,7 @@ BoxCollider2D:
   m_Material: {fileID: 0}
   m_IsTrigger: 1
   m_UsedByEffector: 0
-  m_UsedByComposite: 0
+  m_UsedByComposite: 1
   m_Offset: {x: 0.0010704398, y: 0}
   m_SpriteTilingProperty:
     border: {x: 0.049999997, y: 0.049999997, z: 0.049999997, w: 0.049999997}
@@ -86,7 +86,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 0.1346358, y: 0.13537312}
+  m_Size: {x: 1, y: 1}
   m_EdgeRadius: 0
 --- !u!114 &114138242528934766
 MonoBehaviour:
@@ -99,8 +99,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9975851649179d6478538172da8ca100, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _velocity: {x: -1, y: 0, z: 0}
-  bullet: {fileID: 1744984683245538}
+  _velocity: {x: 5, y: 0, z: 0}
+  _collisionTag: Enemy
 --- !u!212 &212009520217415852
 SpriteRenderer:
   m_ObjectHideFlags: 1

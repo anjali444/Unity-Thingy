@@ -5,7 +5,7 @@ using UnityEngine;
 public class EnemyActionController : MonoBehaviour {
 
     [SerializeField] private Rigidbody2D _rigidbody;
-    [SerializeField] private GameObject bullet;
+    [SerializeField] private GameObject _bullet;
     public float _timebetweenshots;
 
     void Start()
@@ -19,7 +19,7 @@ public class EnemyActionController : MonoBehaviour {
         var minx = Camera.main.ViewportToWorldPoint(new Vector3(0, 0, 0)).x;
         var maxx = Camera.main.ViewportToWorldPoint(new Vector3(1, 1, 0)).x;
         var myx = transform.position.x;
-        if (myx >minx && myx < maxx)
+        if (myx > minx && myx < maxx)
         {
             Debug.Log("I became visable");
             yield break;

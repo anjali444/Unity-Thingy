@@ -5,6 +5,7 @@ using UnityEngine;
 public class BulletMovement : MonoBehaviour {
 
     public Vector3 _velocity;
+    public string _collisionTag;
 	
 	// Update is called once per frame
 	void Update () {
@@ -14,7 +15,7 @@ public class BulletMovement : MonoBehaviour {
     private void OnTriggerEnter2D(Collider2D collision)
     {
         //Debug.Log("bullet!");
-        if (collision.tag == "Player")
+        if (collision.tag == _collisionTag)
         {
             Debug.Log("bullet touches player!");
             Destroy(gameObject);
@@ -22,3 +23,4 @@ public class BulletMovement : MonoBehaviour {
         }
     }
 }
+//add collision tag to player and ask Eris
