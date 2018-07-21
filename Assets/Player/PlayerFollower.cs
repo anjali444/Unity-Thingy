@@ -7,7 +7,7 @@ public class PlayerFollower : MonoBehaviour {
     [SerializeField] public Transform toFollow;
     [SerializeField] public BoxCollider2D _collider;
 
-	// Update is called once per frame
+	
 	void Update () {
         Vector3 newPosition = toFollow.position;
         newPosition = _collider.bounds.ClosestPoint(newPosition);

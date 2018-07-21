@@ -20,6 +20,7 @@ public class PlayerMovement : MonoBehaviour {
         float jumpAmount;
 
         jumpAmount = 0;
+        // Is the player on the ground? Grounded = the answer
         grounded = Physics2D.Linecast(transform.position, groundCheck.position, 1 << LayerMask.NameToLayer("Ground"));
 
         axis = Input.GetAxisRaw("Horizontal");

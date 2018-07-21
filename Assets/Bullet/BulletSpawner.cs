@@ -7,12 +7,23 @@ public class BulletSpawner : MonoBehaviour {
     public GameObject bullet;
     public float spawnTime = 3f;
     public bool autofire = true;
+
 	void Start ()
     {
         if (autofire) { InvokeRepeating("Spawn", spawnTime, spawnTime); }
 	}
-	
-	public void Spawn ()
+
+    void Update()
+    {
+        
+        if (Input.GetButtonDown("Fire1"))
+        {
+            Debug.Log("Update");
+            Spawn();
+        }
+    }
+
+    public void Spawn ()
     {
             Instantiate(bullet, transform.position, Quaternion.identity);
     }

@@ -6,21 +6,25 @@ public class BulletMovement : MonoBehaviour {
 
     public Vector3 _velocity;
     public string _collisionTag;
+    public int _damage = 1;
 	
-	// Update is called once per frame
+	
 	void Update () {
         transform.position += _velocity * Time.deltaTime;
 	}
 
-    private void OnTriggerEnter2D(Collider2D collision)
+    void OnTriggerEnter2D(Collider2D collision)
     {
-        //Debug.Log("bullet!");
         if (collision.tag == _collisionTag)
         {
-            Debug.Log("bullet touches player!");
+            var health = collision.gameObject.GetComponent<Health>();
+            if (health != null)
+            {
+                health.Hit(_damage);
+            }
+                
             Destroy(gameObject);
 
         }
     }
 }
-//add collision tag to player and ask Eris

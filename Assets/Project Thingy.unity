@@ -329,9 +329,10 @@ GameObject:
   - component: {fileID: 397965758}
   - component: {fileID: 397965757}
   - component: {fileID: 397965759}
+  - component: {fileID: 397965760}
   m_Layer: 10
   m_Name: Enemy (2)
-  m_TagString: Untagged
+  m_TagString: Enemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -431,7 +432,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _rigidbody: {fileID: 0}
-  _bullet: {fileID: 0}
+  _bullet: {fileID: 1744984683245538, guid: f61e2623305d7cc4993e26d2df109586, type: 2}
   _timebetweenshots: 0
 --- !u!114 &397965758
 MonoBehaviour:
@@ -445,6 +446,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _velocity: {x: -2, y: 0, z: 0}
+  _collisionTag: 
+  _damage: 1
 --- !u!114 &397965759
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -457,8 +460,21 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   bullet: {fileID: 1744984683245538, guid: f61e2623305d7cc4993e26d2df109586, type: 2}
-  spawnTime: 2
+  spawnTime: 3
   autofire: 1
+--- !u!114 &397965760
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 397965753}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9fb817e1d9030dc47bb4953b177d5680, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  destroyOnDeath: 0
+  life: 1
 --- !u!1 &459632746
 GameObject:
   m_ObjectHideFlags: 0
@@ -471,8 +487,8 @@ GameObject:
   - component: {fileID: 459632747}
   - component: {fileID: 459632748}
   - component: {fileID: 459632751}
-  - component: {fileID: 459632753}
   - component: {fileID: 459632752}
+  - component: {fileID: 459632753}
   m_Layer: 11
   m_Name: Player
   m_TagString: Player
@@ -612,9 +628,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: bef2806032baea945b01d96687472561, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  bullet: {fileID: 1744984683245538, guid: f61e2623305d7cc4993e26d2df109586, type: 2}
-  spawnTime: 3
-  autofire: 1
+  bullet: {fileID: 1744984683245538, guid: e8ed93bd2ad70e044a998ccd635972a1, type: 2}
+  spawnTime: 2
+  autofire: 0
 --- !u!114 &459632753
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -623,10 +639,11 @@ MonoBehaviour:
   m_GameObject: {fileID: 459632746}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: f669ceea74865ab4b893bfd1338a4f4b, type: 3}
+  m_Script: {fileID: 11500000, guid: 9fb817e1d9030dc47bb4953b177d5680, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _bulletSpawner: {fileID: 459632752}
+  destroyOnDeath: 0
+  life: 1
 --- !u!1 &654346368
 GameObject:
   m_ObjectHideFlags: 0
@@ -1241,9 +1258,10 @@ GameObject:
   - component: {fileID: 1327693767}
   - component: {fileID: 1327693766}
   - component: {fileID: 1327693768}
+  - component: {fileID: 1327693769}
   m_Layer: 10
   m_Name: Enemy (3)
-  m_TagString: Untagged
+  m_TagString: Enemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1343,7 +1361,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _rigidbody: {fileID: 0}
-  _bullet: {fileID: 0}
+  _bullet: {fileID: 1744984683245538, guid: f61e2623305d7cc4993e26d2df109586, type: 2}
   _timebetweenshots: 0
 --- !u!114 &1327693767
 MonoBehaviour:
@@ -1357,6 +1375,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _velocity: {x: -2, y: 0, z: 0}
+  _collisionTag: 
+  _damage: 1
 --- !u!114 &1327693768
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1369,8 +1389,21 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   bullet: {fileID: 1744984683245538, guid: f61e2623305d7cc4993e26d2df109586, type: 2}
-  spawnTime: 2
+  spawnTime: 3
   autofire: 1
+--- !u!114 &1327693769
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1327693762}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9fb817e1d9030dc47bb4953b177d5680, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  destroyOnDeath: 0
+  life: 1
 --- !u!1 &1388922658
 GameObject:
   m_ObjectHideFlags: 0
@@ -1384,9 +1417,10 @@ GameObject:
   - component: {fileID: 1388922659}
   - component: {fileID: 1388922663}
   - component: {fileID: 1388922664}
+  - component: {fileID: 1388922665}
   m_Layer: 10
   m_Name: Enemy (1)
-  m_TagString: Untagged
+  m_TagString: Enemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1403,6 +1437,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _velocity: {x: -2, y: 0, z: 0}
+  _collisionTag: 
+  _damage: 1
 --- !u!61 &1388922660
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -1512,8 +1548,21 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   bullet: {fileID: 1744984683245538, guid: f61e2623305d7cc4993e26d2df109586, type: 2}
-  spawnTime: 2
+  spawnTime: 3
   autofire: 1
+--- !u!114 &1388922665
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1388922658}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9fb817e1d9030dc47bb4953b177d5680, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  destroyOnDeath: 0
+  life: 1
 --- !u!1 &1649297149
 GameObject:
   m_ObjectHideFlags: 0
