@@ -22,7 +22,7 @@ public class BulletMovement : MonoBehaviour {
             {
                 health.Hit(_damage);
             }
-                
+
             Destroy(gameObject);
 
         }

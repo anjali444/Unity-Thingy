@@ -9,6 +9,7 @@ public class PlayerMovement : MonoBehaviour {
     [SerializeField] private float _moveForce;
     [SerializeField] private float _maxSpeed;
     [SerializeField] private float _jumpForce;
+    [SerializeField] private Camera _camera;
 
     public Transform groundCheck;
     bool grounded = false;
@@ -35,6 +36,8 @@ public class PlayerMovement : MonoBehaviour {
         float speed = Mathf.Sign(_rigidbody.velocity.x) * _maxSpeed;
             _rigidbody.velocity = new Vector2(speed, _rigidbody.velocity.y);
         }
+
+        _camera.transform.position = new Vector3(_rigidbody.transform.position.x, _rigidbody.transform.position.y, -10);
     }
 
 
